@@ -1,7 +1,5 @@
 class TennisScoreCalculator {
   func score(player1Points: Int, player2Points: Int) -> String {
-    
-
     let maxPoints = max(player1Points, player2Points)
     if player1Points > player2Points && maxPoints >= 4 {
       return advantageOrWinner(player1Points, player2Points) + " player 1"
@@ -18,9 +16,7 @@ class TennisScoreCalculator {
       return pointToScore(player1Points) + "-All"
     }
 
-    var result = pointToScore(player1Points) + "-"
-    result += pointToScore(player2Points)
-    return result
+    return "\(pointToScore(player1Points))-\(pointToScore(player2Points))"
   }
 
   private func advantageOrWinner(_ player1Points: Int, _ player2Points: Int) -> String {

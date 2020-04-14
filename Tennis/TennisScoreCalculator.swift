@@ -1,22 +1,23 @@
 class TennisScoreCalculator {
   func score(player1Points: Int, player2Points: Int) -> String {
-    
-    return pointToScore(points: player1Points)
+    var result = pointToScore(points: player1Points) + "-"
+    result += pointToScore(points: player2Points)
+    return result
   }
   
   private func pointToScore(points: Int) -> String {
     if points == 1 {
-      return "Fifteen-Love"
+      return "Fifteen"
     }
 
     if points == 2 {
-      return "Thirty-Love"
+      return "Thirty"
     }
 
     if points == 3 {
-      return "Forty-Love"
+      return "Forty"
     }
 
-    return "Love-Love"
+    return "Love"
   }
 }

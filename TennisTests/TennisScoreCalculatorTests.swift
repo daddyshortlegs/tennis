@@ -23,10 +23,14 @@ class TennisScoreCalculatorTests: XCTestCase {
   
   func testPlayer1Winner() {
     XCTAssertEqual("Win for player 1", calc.score(player1Points: 4, player2Points: 0))
+    XCTAssertEqual("Win for player 1", calc.score(player1Points: 4, player2Points: 1))
+    XCTAssertEqual("Win for player 1", calc.score(player1Points: 4, player2Points: 2))
   }
 
   func testPlayer2Winner() {
     XCTAssertEqual("Win for player 2", calc.score(player1Points: 0, player2Points: 4))
+    XCTAssertEqual("Win for player 2", calc.score(player1Points: 1, player2Points: 4))
+    XCTAssertEqual("Win for player 2", calc.score(player1Points: 2, player2Points: 4))
   }
 
 

@@ -1,7 +1,13 @@
 class TennisScoreCalculator {
   func score(player1Points: Int, player2Points: Int) -> String {
     
+    
     if player1Points == 4 {
+      let delta = player1Points - player2Points
+      if delta == 1 {
+        return "Advantage player 1"
+      }
+
       return "Win for player 1"
     }
 

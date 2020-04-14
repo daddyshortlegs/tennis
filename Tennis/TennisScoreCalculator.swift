@@ -3,25 +3,12 @@ class TennisScoreCalculator {
     let maxPoints = max(player1Points, player2Points)
     if maxPoints >= 4 && player1Points != player2Points {
       var result = advantageOrWinner(player1Points, player2Points)
-      
-      var winningPlayer = ""
-      if player1Points > player2Points {
-        winningPlayer = " player 1"
-      }
-
-      if player2Points > player1Points {
-        winningPlayer = " player 2"
-      }
-      
-      
-      return result + winningPlayer
+      var winningPlayer = (player1Points > player2Points ? "1" : "2")
+      return "\(result) player \(winningPlayer)"
     }
 
     if player1Points == player2Points {
-      if player1Points >= 3 {
-        return "Deuce"
-      }
-      return pointToScore(player1Points) + "-All"
+      return (player1Points >= 3 ? "Deuce" : pointToScore(player1Points) + "-All")
     }
 
     return "\(pointToScore(player1Points))-\(pointToScore(player2Points))"

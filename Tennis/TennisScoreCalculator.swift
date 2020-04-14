@@ -9,7 +9,7 @@ class TennisScoreCalculator {
 
         return "Win for player 1"
       }
-    } else {
+    } else if player2Points > player1Points {
 
       if player2Points >= 4 {
         let delta = player2Points - player1Points
@@ -24,7 +24,11 @@ class TennisScoreCalculator {
     var result = pointToScore(points: player1Points) + "-"
 
     if player1Points == player2Points {
-      result += "All"
+      if player1Points >= 3 {
+        return "Deuce"
+      } else {
+        result += "All"
+      }
     } else {
       result += pointToScore(points: player2Points)
     }

@@ -41,6 +41,10 @@ class TennisScoreCalculatorTests: XCTestCase {
   
   func testTie() {
     XCTAssertEqual("Love-All", calc.score(player1Points: 0, player2Points: 0))
+    XCTAssertEqual("Fifteen-All", calc.score(player1Points: 1, player2Points: 1))
+    XCTAssertEqual("Thirty-All", calc.score(player1Points: 2, player2Points: 2))
+    XCTAssertEqual("Deuce", calc.score(player1Points: 3, player2Points: 3))
+    XCTAssertEqual("Deuce", calc.score(player1Points: 4, player2Points: 4))
 
   }
 

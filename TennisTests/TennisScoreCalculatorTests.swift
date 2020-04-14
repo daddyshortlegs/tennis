@@ -50,7 +50,7 @@ class TennisScoreCalculatorTests: XCTestCase {
     verify(p1Points: 3, p2Points: 3, score: "Deuce")
     verify(p1Points: 4, p2Points: 4, score: "Deuce")
   }
-  
+    
   func verify(p1Points: Int, p2Points: Int, score: String) {
     XCTAssertEqual(score, calc.score(player1Points: p1Points, player2Points: p2Points))
   }

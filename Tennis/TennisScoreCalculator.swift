@@ -1,12 +1,20 @@
 class TennisScoreCalculator {
   func score(player1Points: Int, player2Points: Int) -> String {
     let maxPoints = max(player1Points, player2Points)
-    if player1Points > player2Points && maxPoints >= 4 {
-      return advantageOrWinner(player1Points, player2Points) + " player 1"
-    }
+    if maxPoints >= 4 && player1Points != player2Points {
+      var result = advantageOrWinner(player1Points, player2Points)
+      
+      var winningPlayer = ""
+      if player1Points > player2Points {
+        winningPlayer = " player 1"
+      }
 
-    if player2Points > player1Points && maxPoints >= 4 {
-      return advantageOrWinner(player1Points, player2Points) + " player 2"
+      if player2Points > player1Points {
+        winningPlayer = " player 2"
+      }
+      
+      
+      return result + winningPlayer
     }
 
     if player1Points == player2Points {

@@ -12,6 +12,11 @@ class TennisScoreCalculator {
     }
 
     if player2Points == 4 {
+      let delta = player2Points - player1Points
+      if delta == 1 {
+        return "Advantage player 2"
+      }
+
       return "Win for player 2"
     }
 

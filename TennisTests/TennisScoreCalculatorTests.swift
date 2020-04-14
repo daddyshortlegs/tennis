@@ -33,9 +33,9 @@ class TennisScoreCalculatorTests: XCTestCase {
     XCTAssertEqual("Win for player 2", calc.score(player1Points: 2, player2Points: 4))
   }
   
-  func testAdvantagePlayer1() {
+  func testAdvantage() {
     XCTAssertEqual("Advantage player 1", calc.score(player1Points: 4, player2Points: 3))
-
+    XCTAssertEqual("Advantage player 2", calc.score(player1Points: 3, player2Points: 4))
   }
 
 

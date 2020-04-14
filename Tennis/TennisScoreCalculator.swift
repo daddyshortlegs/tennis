@@ -4,7 +4,11 @@ class TennisScoreCalculator {
     if player1Points == 4 {
       return "Win for player 1"
     }
-    
+
+    if player2Points == 4 {
+      return "Win for player 2"
+    }
+
     var result = pointToScore(points: player1Points) + "-"
     result += pointToScore(points: player2Points)
     return result
